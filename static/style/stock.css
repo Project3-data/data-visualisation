@@ -1,0 +1,51 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Dark grey color for text */
+    margin-top: 20px;
+}
+
+#stockSelector {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#chartTypeControls {
+    text-align: center;
+    margin: 20px;
+}
+
+#chartTypeControls button,
+#fullscreenButton { /* Style for all buttons including the full-screen button */
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #5DADE2; /* Sky blue background for buttons */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#chartTypeControls button:hover,
+#fullscreenButton:hover { /* Hover style for all buttons */
+    background-color: #3498DB; /* Darker blue on hover */
+}
+
+#chartContainer {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    background-color: #ffffff;
+    margin: 20px auto;
+    border-radius: 5px;
+    height: 300px; /* Set the height of the chart */
+    width: 100%;   /* Set the width of the chart */
+}

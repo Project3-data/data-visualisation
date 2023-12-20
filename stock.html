@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tech Stock Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="static/style/stock.css">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+    <h1>Tech Stock Interactive Dashboard</h1>
+    
+    <!-- Dropdown for selecting the stock -->
+    <select id="stockSelector" onchange="updateChart()">
+        <option value="AAPL">Apple</option>
+        <option value="MSFT">Microsoft</option>
+        <option value="NVDA">NVIDIA</option>
+        <option value="AVGO">Broadcom</option>
+        <option value="ORCL">Oracle</option>
+        <option value="ADBE">Adobe</option>
+        <option value="CRM">Salesforce</option>
+        <option value="AMD">AMD</option>
+        <option value="ACN">Accenture</option>
+        <option value="CSCO">Cisco</option>
+    </select>
+
+    <!-- Buttons for changing chart type -->
+    <div id="chartTypeControls">
+        <button onclick="changeChartType('line')">Line Chart</button>
+        <button onclick="changeChartType('column')">Column Chart</button>
+        <button onclick="changeChartType('area')">Area Chart</button>
+        <!-- Button for toggling full-screen mode -->
+        <button id="fullscreenButton" onclick="toggleFullScreenMode()">Toggle Full-Screen</button>
+    </div>
+
+    <!-- Container for the CanvasJS chart -->
+    <div id="chartContainer"></div>
+
+    <!-- JavaScript file that contains the logic for fetching data and rendering the chart -->
+    <script src="static/js/stock.js"></script>
+</body>
+</html>
