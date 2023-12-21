@@ -48,7 +48,7 @@ function updateChart() {
             valueFormatString: "#0.##"
         },
         data: [{
-            type: "line", // Change this type dynamically with the buttons
+            type: "area", // Change this type dynamically with the buttons
             name: selectedStock,
             xValueType: "dateTime",
             xValueFormatString: "YYYY-MM-DD",
@@ -60,6 +60,7 @@ function updateChart() {
         }]
     });
     chart.render();
+    
 }
 
 // Function to change chart type
@@ -81,3 +82,4 @@ function toggleFullScreenMode() {
         }
     }
 }
+

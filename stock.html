@@ -24,8 +24,6 @@
 
     <!-- Buttons for changing chart type -->
     <div id="chartTypeControls">
-        <button onclick="changeChartType('line')">Line Chart</button>
-        <button onclick="changeChartType('column')">Column Chart</button>
         <button onclick="changeChartType('area')">Area Chart</button>
         <!-- Button for toggling full-screen mode -->
         <button id="fullscreenButton" onclick="toggleFullScreenMode()">Toggle Full-Screen</button>
@@ -33,6 +31,19 @@
 
     <!-- Container for the CanvasJS chart -->
     <div id="chartContainer"></div>
+
+    <!-- Container to hold Information about each stock -->
+    <div class="StockInfoContainer">
+        <!-- Based classes off of Bellybutton Biodiversity Assignment to help create panel containing stock info -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Stock Info</h3>
+            </div>
+            <div id="stockSelector" class="panel-body"></div>
+        </div>
+
+    </div>
+
 
     <!-- JavaScript file that contains the logic for fetching data and rendering the chart -->
     <script src="static/js/stock.js"></script>
