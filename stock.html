@@ -4,6 +4,8 @@
     <title>Tech Stock Dashboard</title>
     <link rel="stylesheet" type="text/css" href="static/style/stock.css">
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!-- Add bootstrap CSS as used in Bellybutton biodiversity assignment-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
     <h1>Tech Stock Interactive Dashboard</h1>
@@ -37,9 +39,16 @@
         <!-- Based classes off of Bellybutton Biodiversity Assignment to help create panel containing stock info -->
         <div class="panel panel-primary">
             <div class="panel-heading">
-              <h3 class="panel-title">Stock Info</h3>
+              <h2 class="panel-title">Stock Info</h2>
             </div>
-            <div id="stockSelector" class="panel-body"></div>
+            <div id="stockSelector" class="panel-body">
+                <!-- Want the following Information for the Stock Info -->
+                <h5 class="panel-text">Stock Name: </h5>
+                <h5 class="panel-text">Minimum Closing Price: </h5>
+                <h5 class="panel-text">Minimum Closing Price Date: </h5>
+                <h5 class="panel-text">Maximum Closing Price: </h5>
+                <h5 class="panel-text">Maximum Closing Price Date: </h5>
+            </div>
         </div>
 
     </div>
