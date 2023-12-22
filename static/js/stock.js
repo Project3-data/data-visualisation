@@ -1,12 +1,21 @@
 let stockData = {};
+let sentimentData = {};
 let chart = null;
+let sentimentChart = null;
 
 window.onload = function() {
     fetch('json/stock_data.json')
         .then(response => response.json())
         .then(data => {
             stockData = data;
-            updateChart(); // Initial chart display
+            updateChart(); // Initial stock chart display
+        });
+
+    fetch('json/sentiment_data.json')
+        .then(response => response.json())
+        .then(data => {
+            processSentimentData(data); // Process the sentiment data
+            updateSentimentChart(); // Initial sentiment chart display
         });
 };
 
@@ -83,3 +92,55 @@ function toggleFullScreenMode() {
     }
 }
 
+function processSentimentData(data) {
+    // Initialize an empty object to store aggregated sentiment scores
+    let aggregatedSentiment = {};
+
+    // Iterate over each sentiment data point
+    data.forEach(sentimentSet => {
+        for (let stock in sentimentSet) {
+            if (!aggregatedSentiment[stock]) {
+                aggregatedSentiment[stock] = [];
+            }
+            aggregatedSentiment[stock].push(sentimentSet[stock]);
+        }
+    });
+
+    // Calculate average sentiment for each stock
+    for (let stock in aggregatedSentiment) {
+        let averageSentiment = aggregatedSentiment[stock].reduce((a, b) => a + b, 0) / aggregatedSentiment[stock].length;
+        sentimentData[stock] = averageSentiment;
+    }
+}
+
+
+function updateSentimentChart() {
+    var sentimentPoints = Object.keys(sentimentData).map(key => {
+        return { label: key, y: sentimentData[key] };
+    });
+
+    sentimentChart = new CanvasJS.Chart("sentimentChartContainer", {
+        theme: "light2",
+        animationEnabled: true,
+        exportEnabled: true,
+        title: {
+            text: "Tech Stock Sentiment Scores",
+            fontColor: "#333",
+            fontFamily: "tahoma",
+            fontSize: 24
+        },
+        axisY: {
+            title: "Sentiment Score",
+            includeZero: true,
+            maximum: 1
+        },
+        data: [{
+            type: "column",
+            name: "Sentiment Score",
+            showInLegend: true,
+            legendMarkerColor: "grey",
+            dataPoints: sentimentPoints
+        }]
+    });
+    sentimentChart.render();
+}
