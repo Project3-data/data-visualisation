@@ -6,6 +6,8 @@
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <!-- Add bootstrap CSS as used in Bellybutton biodiversity assignment-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Add d3 library to d3 select stock info -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
     <h1>Tech Stock Interactive Dashboard</h1>
@@ -26,7 +28,6 @@
 
     <!-- Buttons for changing chart type -->
     <div id="chartTypeControls">
-        <button onclick="changeChartType('area')">Area Chart</button>
         <!-- Button for toggling full-screen mode -->
         <button id="fullscreenButton" onclick="toggleFullScreenMode()">Toggle Full-Screen</button>
     </div>
@@ -35,24 +36,41 @@
     <div id="chartContainer"></div>
 
     <!-- Container to hold Information about each stock -->
-    <div class="StockInfoContainer">
-        <!-- Based classes off of Bellybutton Biodiversity Assignment to help create panel containing stock info -->
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h2 class="panel-title">Stock Info</h2>
-            </div>
-            <div id="stockSelector" class="panel-body">
-                <!-- Want the following Information for the Stock Info -->
-                <h5 class="panel-text">Stock Name: </h5>
-                <h5 class="panel-text">Minimum Closing Price: </h5>
-                <h5 class="panel-text">Minimum Closing Price Date: </h5>
-                <h5 class="panel-text">Maximum Closing Price: </h5>
-                <h5 class="panel-text">Maximum Closing Price Date: </h5>
+    <div class="row">
+        <!-- Adjust the size of the Info box -->
+        <div class="col-md-4">
+            <div class="StockInfoContainer">
+                <!-- Based classes off of Bellybutton Biodiversity Assignment to help create panel containing stock info -->
+                <div class="panel panel-primary">
+                    <!-- Added panel-head id to the original panel-heading documentation so I can adjust background color -->
+                    <div class="panel-heading" id="panel-head">
+                        <h1 class="panel-title">
+                            <b class="stock-info">Stock Info</b>
+                        </h1>
+                    </div>
+                    <div id="stockSelector" class="panel-body">
+                        <!-- Want the following Information for the Stock Info -->
+                        <!-- Bold items to make text pop out more -->
+                        <b>
+                            <!-- Used unordered list for every value being displayed -->
+                            <ul id="stockName" class="panel-text"> </ul>
+                            <ul id="minClosePrice" class="panel-text"> </ul>
+                            <ul id="minCloseDate" class="panel-text"> </ul>
+                            <ul id="maxClosePrice" class="panel-text"> </ul>
+                            <ul id="maxCloseDate" class="panel-text"> </ul>
+                        </b>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
 
+
+    <!-- Container for the sentiment CanvasJS chart -->
+    <div id="sentimentChartContainer" style="height: 300px; width: 100%; margin-top: 20px;"></div>  
+
+    <!-- Container for the D3 chart -->
+    <div id="d3ChartContainer"></div>
 
     <!-- JavaScript file that contains the logic for fetching data and rendering the chart -->
     <script src="static/js/stock.js"></script>
