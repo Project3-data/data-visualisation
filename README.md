@@ -86,3 +86,7 @@ All:
 
 - Used bootstrap CSS for styling purposes. HTML reference was found in bellybutton diversity assignment. Utilized following line of code:
 "link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css""
+
+
+### Diya
+- Utilized [d3 library](https://d3js.org)
