@@ -1,6 +1,10 @@
 # Data-Visualisation
 Ron Whiting, Diya Patel, Wilian Ushca, Justin Shilling
 
+# Pages Link
+https://project3-data.github.io/data-visualisation/stock.html
+Note that we must add the stock.html to the end of the link as the initial pages link doesn't include this portion.
+
 
 # Group 3 Project Proposal:
 
