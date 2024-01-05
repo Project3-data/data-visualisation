@@ -6,7 +6,7 @@ Ron Whiting, Diya Patel, Wilian Ushca, Justin Shilling
 
 ## Analysis of Top Ten Tech Companies in the Stock Market with 2024 Prediction 
 
-Datasets to be Used: Yahoo! Finance API ( ‘yfinance’ ) 
+Datasets to be Used: [Yahoo! Finance API ( ‘yfinance’ )](https://finance.yahoo.com/)
 
 ## Task Breakdowns:
 
@@ -18,7 +18,7 @@ Datasets to be Used: Yahoo! Finance API ( ‘yfinance’ )
 
 - Clean, process and align the data to ensure compatibility for analysis
 
-- Create interactive visualization to present the trends and predictions
+- Create interactive visualization to present the trends
 
 ### Workload Distribution
 
@@ -46,32 +46,17 @@ All:
 	
 ## Question:
 
-- How did the stock prices of the top ten tech companies fluctuate during the COVID-19 pandemic, and what trends emerged? 
+- How did the stock prices of the top ten tech companies fluctuate during the COVID-19 pandemic, and what trends emerged?
 
-- Which tech company demonstrated resilience?
+## Project Overview
 
-- How well can machine learning models predict the stock market trends for the top ten tech companies in 2024?
+The stock market has shown significant fluctuations throughout its history and recent years have been no different. Our group has decided to create a page that visualizes these fluctuations amongst tech companies since right before the start of the COVID-19 pandemic. The purpose of our project is to prove that the current events at the time had a direct negative effect on the top tech companies's stock prices and since then, most of the top tech stocks are in tremendous shape. Looking the data we utilized, our findings seem to bolster our initial hypotheses.
 
-## Trends in Technology
+To begin, our stock info includes data from some of the most popular tech company stocks we could find. Our group handpicked these companies as they are mostly very well known and could be a good representation of the popular tech companies nationwide. The project we built is highly interactive and allows the user to see many aspects of the top tech stocks that are relevant in determining the overall success of the stock. We have a dropdown menu which allows the user to click on the stock they desire to get specified data for that stock. Upon clicking on the desired stock, the graph/stock info text box will display updated/accurate data for each stock. By hovering over the graph, we can see the exact dates and closing prices for each stock. Scrolling down, we have another interactive graph which shows each tech stock's sentiment score. This value tells the user how much each stock is preferred, with the higher values being more preferable. Lastly, we have a graph that shows the lowest closing price for each stock within the 3 year period of data. We determined this was an important metric so we can see which stocks never wound up dipping too low.
 
-- What stocks have showen the most significant stock growth in recent years. 
+Overall, our page tells a story on the common trends that occurred for most tech stocks during and after the pandemic. Most of the stocks took an initial dip at the onset of the pandemic, but afterwards, many of these stocks have risen to a value which is now considered to be their all time high. Though the initial effects of the pandemic were devastating, tech companies have seemed to recouperate quite nicely.
 
-- How has the COVID-19 pandemic disruption impact technology stocks and what trends resulted?
-
-## Trends in Stock Seasons
-
-- How do changes in consumer behavior during holiday seasons impact the stock prices of tech giants?
-
-- How do earning seasons affect stock prices?
-
-- Are there trends in stock prices relating to product release cycles of major tech events?
-
-## Trends in Short Term
-
-- What is the 2024 outlook for the top ten stocks based on analyst reports?
-
-- How are the stocks performing relative to its competition in the short term?
-
+Our group made several ethical considerations when working on this project. We wanted to choose interactive displays which accurately and effectively displayed how the current events of the time effected the stock prices of generally all tech stocks. We did have to consider the fact that there could be many other external factors that could effect certain dips and highs, but overall the trends seemed to remain fairly constant throughout. We didn't want to unfairly nitpick data, which is why we looked at data from a variety of stocks over an extended period of time. This allowed us to fairly asses that there was a trend and not put false blame on a potential outlier.
 
 
 ## Citations
@@ -90,3 +75,8 @@ All:
 
 ### Diya
 - Utilized [d3 library](https://d3js.org)
+
+### Ron
+- Utilized [Open BB](https://docs.openbb.co/sdk/data-available/stocks/comparison-analysis) documentation
+
+- Utilized [Finbrain](https://docs.finbrain.tech/#get-market-predictions) documentation
