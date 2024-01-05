@@ -10,7 +10,6 @@ Datasets to be Used: Yahoo! Finance API ( ‘yfinance’ )
 
 ## Task Breakdowns:
 
-<<<<<<< HEAD
 - Look through and gather the top ten tech stocks data to relate it to the question
 
 - Analyze data using yahoo finance, pandas, matplotlib, d3js, canvasjs and other tools
