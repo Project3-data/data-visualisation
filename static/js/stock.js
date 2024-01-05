@@ -2,7 +2,10 @@ let stockData = {};
 let sentimentData = {};
 let chart = null;
 let sentimentChart = null;
+<<<<<<< HEAD
 let tooltip;
+=======
+>>>>>>> b3c515335af505f6d3ea901e8012512435d23f8d
 
 window.onload = function() {
 
@@ -15,7 +18,14 @@ window.onload = function() {
         .then(response => response.json())
         .then(data => {
             stockData = data;
-            updateChart(); // Initial chart display
+            updateChart(); // Initial stock chart display
+        });
+
+    fetch('json/sentiment_data.json')
+        .then(response => response.json())
+        .then(data => {
+            processSentimentData(data); // Process the sentiment data
+            updateSentimentChart(); // Initial sentiment chart display
         });
 
     fetch('json/sentiment_data.json')
@@ -100,7 +110,10 @@ function toggleFullScreenMode() {
     }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b3c515335af505f6d3ea901e8012512435d23f8d
 function processSentimentData(data) {
     // Initialize an empty object to store aggregated sentiment scores
     let aggregatedSentiment = {};
@@ -138,9 +151,12 @@ function updateSentimentChart() {
             fontFamily: "tahoma",
             fontSize: 24
         },
+<<<<<<< HEAD
         axisX: {
             title: 'Tech Stock Company Names',
         },
+=======
+>>>>>>> b3c515335af505f6d3ea901e8012512435d23f8d
         axisY: {
             title: "Sentiment Score",
             includeZero: true,
@@ -148,10 +164,17 @@ function updateSentimentChart() {
         },
         data: [{
             type: "column",
+<<<<<<< HEAD
+=======
+            name: "Sentiment Score",
+            showInLegend: true,
+            legendMarkerColor: "grey",
+>>>>>>> b3c515335af505f6d3ea901e8012512435d23f8d
             dataPoints: sentimentPoints
         }]
     });
     sentimentChart.render();
+<<<<<<< HEAD
 }
 
 
@@ -305,4 +328,6 @@ function StockInfoContainer(selectedStock){
     var maxCloseDate = stockData[selectedStock].sort(function(a,b){
         return b.close - a.close})[0]['date']
     tableBody1.select('#maxCloseDate').text('Maximum Closing Date: ' + maxCloseDate)
+=======
+>>>>>>> b3c515335af505f6d3ea901e8012512435d23f8d
 }
