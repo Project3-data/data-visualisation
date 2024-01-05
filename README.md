@@ -36,6 +36,7 @@ Justin:
 - Worked on condensing the code Ron/Diya/Justin originally wrote to make it cleaner
 - Combined code from Ron/Diya's individual merges into 1 common repository
 - Worked on final edits of readme file
+- Worked on github pages deployment
 
 Willian:
 - Wrote outline of original readme file
